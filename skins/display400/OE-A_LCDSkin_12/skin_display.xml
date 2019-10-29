@@ -39,7 +39,7 @@
 		<!-- Cover-Linien Default = FFFFFF -->
 		<color name="Cover-Color" value="#848484" />
 	</colors>
-<!-- template Second-MY V1.9 22.08.2017-->
+<!-- template Second-MY 31.08.2017-->
 	<screen name="SummaryClockPanel">
 		<widget source="global.CurrentTime" render="Label" position="center,180" size="195,65" font="MyLcD;65" foregroundColor="Uhr" halign="center" noWrap="1" transparent="1">
 			<convert type="ClockToText"></convert>
@@ -401,7 +401,7 @@
 	</screen>
 <!-- JobView Summary -->
 	<screen name="JobView_summary" position="0,0" size="400,240">
-		<widget source="parent.summary_job_progress" render="Label" position="0,5" size="400,50" font="MyLcD;50" zposition="0" halign="center" valign="center" zPosition="2" transparent="1" >
+		<widget source="parent.summary_job_progress" render="Label" position="0,9" size="400,50" font="MyLcD;50" borderWidth="4" halign="center" valign="center" zPosition="2" transparent="1" >
 			<convert type="ProgressToText">InPercent</convert>
 		</widget>
 		<widget source="parent.summary_job_progress" render="Progress" position="0,3" size="400,60" borderColor="#FFFFFF" foregroundColor="#27408B" borderWidth="2" zPosition="1" />
@@ -427,7 +427,9 @@
 	<screen name="EPGSelectionMulti_summary" position="0,0" size="400,240">
 		<panel name="MyEPGPanel" />
 	</screen>
-
+	<screen name="EPGvertical_summary" position="0,0" size="400,240">
+		<panel name="MyEPGPanel" />
+	</screen>
 	<screen name="EPGSelection_summary" position="0,0" size="400,240">
 		<widget source="parent.Service" render="Label" position="0,0" size="400,38" foregroundColor="Menue-Titel" font="MyLcD;34" transparent="1" halign="center" noWrap="1" >
 			<convert type="ServiceName">Name</convert>
@@ -583,6 +585,13 @@
 	<screen name="SHOUTcastLCDScreen" position="0,0" size="400,240">
 		<widget name="text1" position="0,0" size="400,56" font="MyLcD;24" halign="center" valign="center"/>
 		<widget name="text2" position="0,60" size="400,100" font="MyLcD;30" halign="center" valign="center"/>
+		<panel name="SummaryClockPanel" />
+	</screen>
+<!-- webradioFS -->
+	<screen name="webradioFSdisplay13" position="0,0" size="400,240" >
+		<widget source="Zeile1" render="Label" position="0,15" size="400,50" font="MyLcD;41" foregroundColor="Menue-Auswahl" noWrap="1" />
+		<widget source="Zeile2" render="Label" position="0,65" size="400,50" font="MyLcD;41" foregroundColor="Menue-Auswahl" noWrap="1" />
+		<widget source="Zeile3" render="Label" position="0,115" size="400,50" font="MyLcD;41" foregroundColor="Menue-Auswahl" noWrap="1" />
 		<panel name="SummaryClockPanel" />
 	</screen>
 <!-- EMC Screen -->
